@@ -59,7 +59,7 @@ class AgeControlCommand extends Command{
     }
 
     public static function InsertData($name, $birthdate, $legalAge){
-        $mysql = mysqli_connect("localhost:3306", 'jorge', '7802', 'test_legal_age');
+        $mysql = mysqli_connect("localhost:3306", 'jorge', 'password', 'test_legal_age');
         self::PingDataBase($mysql);
         $sql = "INSERT INTO Personas (Name, Birthdate, Legal age) VALUES ($name, $birthdate, $legalAge)";
         mysqli_query($mysql, $sql);
